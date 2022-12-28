@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Informacion
+        </title>
+        <meta charset=utf-8 />
+        <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+        <link rel="stylesheet" type="text/css" href="informacion.css">
+        <script type="application/Javascript" src="informacion.js"> </script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    </head>
+<body onload="draw(); draw1(); draw2(); draw3();">
+    <div class="container" id="plano">​
+
+       
+
+        <div class="row ">​
+            <div class="col-md  p-7"  >
+                
+                <div id="logo">
+                    <a href="ingreso.html" id="c"  >  <figure >  <img src="xxx3.png" width="145" height="160"   style="filter: contrast(175%);"/>  </figure></a> 
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);" >
+                <div id="menu" >
+
+                    <div class="btn-group">​
+                        <button type="button" class="btn btn-secondary"> <a href="informacion.html" id="a" style="color: white;" >Informacion</a> </button>​​
+                                <button type="button" class="btn btn-light"> <a href="eventos.html" id="a">Actividades</a> </button>​
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" style="color: rgb(160, 0, 0);">​
+                           Acceder
+                        </button>​
+                        <div class="dropdown-menu">​
+                          <a class="dropdown-item" href="loginvista.html" style="color: rgb(160, 0, 0);">Ingresar</a>​
+                          <a class="dropdown-item" href="registrarvista.html" style="color: rgb(160, 0, 0);" >Registrarse</a>​
+                        </div>​
+                      </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md-4 mr-4 mt-2 mt-2" style="background-color: rgb(255, 196, 0);" id="rol" >
+
+                 <div class="row ">​
+
+                    <div class="col-md p-4" style="background-color: rgb(255, 196, 0); text-align: left;" id="noticia" >
+                        <p id="p3">
+                            Últimas Noticias:
+                        </p>
+                    </div>
+                 
+                </div>
+                
+
+                <div class="row justify-content-md-center ">​
+
+                        <div class="col-md-10 mt-4 " style="background-color: rgb(253, 253, 253);" id="inte2" >
+                            <div class="row ">​
+                                <div class="col-md-7  " style="background-color:  rgb(255, 88, 88);" id="intero3" >
+                                    <p id="p4"> Obras:</p>
+                                </div>
+                                
+                            </div>
+                            <canvas id="lienzo" width="145" height="145"></canvas>
+                        </div>
+                     
+                </div>
+
+                <div class="row justify-content-md-center ">​
+
+                    <div class="col-md-10 mt-4 " style="background-color: rgb(253, 253, 253);" id="inte2" >
+                        <div class="row ">​
+                        <div class="col-md-7  " style="background-color: rgb(255, 141, 88);" id="intero3" >
+                            <p id="p4"> Reuniones:</p>
+                        </div>
+                    </div>
+                    <canvas id="lienzo1" width="145" height="145"></canvas>
+                    </div>
+                 
+                 </div>
+
+
+                 <div class="row justify-content-md-center ">​
+
+                    <div class="col-md-10 mt-4 " style="background-color: rgb(253, 253, 253);" id="inte2" >
+                      <div class="row ">​
+                        <div class="col-md-7  " style="background-color:  rgb(255, 189, 89);" id="intero3" >
+                            <p id="p4"> Actividades:</p>
+                        </div>
+                       </div>
+                     <canvas id="lienzo2" width="145" height="145"></canvas>
+                    </div>
+                 
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md p-4 mt-4"  id="noticia" >
+                         <button type="button" class="btn btn-dark" id="btncalendario"><a href="eventos.html" id="b" >Actividades</a></button>​
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md mt-2" style="background-color: rgb(255, 255, 255);" id="info">
+                <div class="row ">​
+
+                    <div class="col-md " style="background-color: rgb(255, 196, 0);" id="rol2" >
+                        <h3 id="h3"> Nuestro Objetivo</h3>
+                    </div>
+                 
+                    </div>
+
+                    <div class="row ">​
+
+                        <div class="col-md " style="background-color: rgb(253, 253, 253);" id="rol3" >
+                            <p id="p1">
+                                Promover y fortalecer el centido de pertenencia 
+                                frente a la comunidad a través de la democracia.
+
+                            </p>
+                        </div>
+                     
+                        </div>
+
+                <div class="row ">​
+
+                    <div class="col-md " style="background-color: rgb(255, 153, 0);" id="rol2" >
+                        <h3 id="h3"> Nuestra Misión</h3>
+                    </div>
+                 
+                </div>
+
+                    <div class="row ">​
+
+                        <div class="col-md " style="background-color: rgb(253, 253, 253);" id="rol3m" >
+                            <p id="p1">
+                                Lograr que la junta de acción comunal sea una organización no lucrativa 
+                                que trabaja en pro de conseguir un mejor bienestar económico, 
+                                social y cultural para la comunidad, por medio de programas y  
+                                actividades.
+                            </p>
+                        </div>
+                        
+                     
+                        </div>
+
+                <div class="row ">​
+
+                    <div class="col-md " style="background-color:  rgb(255, 127, 8);" id="rol2" >
+                        <h3 id="h3"> Nuestra Visión</h3>
+                    </div>
+                 
+                    </div>
+
+                    <div class="row ">​
+
+                        <div class="col-md " style="background-color: rgb(253, 253, 253);" id="rol3v" >
+                            <p id="p1">
+                                La junta de acción será una organización de carácter comunitario 
+                                cuyos objetivos se verán realizados, donde se impulsara grandes proyectos 
+                                comunitarios que permitiran combatir y reducir algunas problemáticas de la comunidad.
+                            </p>
+                        </div>
+                     
+                        </div>
+
+                <div class="row ">​
+
+                    <div class="col-md " style="background-color: rgb(255, 81, 0);" id="rol2" >
+                        <h3 id="h3"> Directivos de la junta de acción comunal</h3>
+                    </div>
+                 
+                    </div>
+
+
+
+                <div class="row ">​
+
+                <div class="col-md "  id="rol1" >
+                    <div class="row ">​
+                    <div class="col-md " style="background-color: rgb(255, 217, 0);" id="intero" >
+                        <p id="p2"> Presidente</p><br><br><br><br><br>
+                        <p>Cristiano Pedraza</p>
+                    </div>
+                    </div>
+                    <figure>  <img src="presidente.png"  width="160" height="128" />  </figure>
+
+
+                </div>
+                <div class="col-md ml-3 "  id="rol1" >
+                    <div class="row ">​
+                        <div class="col-md " style="background-color: rgb(255, 217, 0);" id="intero" >
+                            <p id="p2"> Vicepresidente</p><br><br><br><br><br>
+                            <p>Yenny fajardo</p>
+
+                        </div>
+                    </div>
+                    <figure>  <img src="vicepresidente1.png"  width="160" height="128" />  </figure>
+                </div>
+                <div class="col-md mr-3 ml-3 " id="rol1" >
+                    <div class="row ">​
+                        <div class="col-md" style="background-color:rgb(255, 217, 0);" id="intero" >
+                            <p id="p2">Secretaria </p><br><br><br><br><br>
+                            <p>Martha Paez</p>
+                        </div>
+                    </div>
+                    <figure>  <img src="secretaria1.png"  width="160" height="128" />  </figure>
+                </div>
+                </div>
+
+
+                <div class="row ">​
+
+                    <div class="col-md "  id="rol1" >
+                        <div class="row ">​
+                            <div class="col-md" style="background-color: rgb(255, 217, 0);" id="intero" >
+                                <p id="p2"> Tesorero</p><br><br><br><br><br>
+                                <p>Camilo Duque</p>
+                            </div>
+                        </div>
+                        <figure>  <img src="tesorero1.png"  width="160" height="128" />  </figure>
+                    </div>
+                    <div class="col-md ml-3 "  id="rol1" >
+                        <div class="row ">​
+                            <div class="col-md " style="background-color: rgb(255, 217, 0);" id="intero" >
+                                <p id="p2"> Fiscal</p><br><br><br><br><br>
+                                <p>Sandra Puentes</p>
+
+                            </div>
+                        </div>
+                        <figure>  <img src="fiscal1.png"  width="160" height="128" />  </figure>
+                    </div>
+                    <div class="col-md mr-3 ml-3 "  id="rol1" >
+                        <div class="row ">​
+                            <div class="col-md  " style="background-color: rgb(255, 217, 0);" id="intero" >
+                                <p id="p2"> Cordinador</p><br><br><br><br><br>
+                                <p>Edwin Avila</p>
+
+                            </div>
+                        </div>
+                        <figure>  <img src="cordinador1.png"  width="160" height="128" />  </figure>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md mt-2" style="background-color: rgb(255, 38, 0);" id="rol2" >
+                        <h3 id="h3"> Ubicación</h3>
+                    </div>
+                 
+                    </div>
+
+                    <div class="row ">​
+
+                        <div class="col-md " style="background-color: rgb(253, 253, 253);" id="rol4" >
+                            <figure id="f2">  <img src="mapa.jpg"  width="616" height="350" />  </figure>
+                        </div>
+                     
+                        </div>
+
+            </div>
+
+            
+            
+
+                  
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <h4 id="h4" >Contactenos  
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+</html>

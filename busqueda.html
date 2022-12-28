@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Busqueda
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <script type="application/Javascript" src="registro.js"> </script>
+    <script type="application/Javascript" src="busqueda.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body onload="draw(); draw3()">
+    <div class="container" id="plano">​
+
+
+
+        <div class="row ">​
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingresoAdministrados.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160"  style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);">
+                <div id="menu">
+
+                    <div class="btn-group">​
+                                
+                                <button type="button" class="btn btn-light"> <a href="informacionAdm.html" id="a"  >  Informacion</a> </button>
+                                <button type="button" class="btn btn-secondary"> <a href="busqueda.html" id="a"
+                                    style="color: white;">Busqueda</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="consultaAdm.html" id="a">Consulta</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="registro.html" id="a">Registro</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="modificacion.html" id="a">Actualización</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="eventosAdm.html" id="a">Actividades</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="cuentasAdm.html" id="a">Rendición de cuentas</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="planeacionAdm.html" id="a">Plan de acción</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="ingreso.html" id="a">Cerrar Sesión</a> </button>​
+                    </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1">
+                <div class="alert alert-warning" style="margin-top: 5px;">​
+                    <strong>Recuerde!</strong> Solo podra hacer el proceso de registro si es miembro administrativo de
+                    la junta de acción comunal.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1 " style="background-color:rgb(255, 217, 0);">
+
+
+                <div id="menu2">
+
+                    <div class="btn-group" style="height: 40px; ">​
+
+                        <button type="button" class="btn btn-light" id="btn" style="width: 500px;">
+                            <a href="#obra" id="b"> <i class="fas fa-journal-whills" style="color: rgb(0, 0, 0);">&nbsp
+                                    &nbsp Formularios </i>
+                            </a>
+                        </button>​
+                    </div>​
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md-7 mt-2 mb-2 p-2" style="background-color: rgb(230, 238, 233); text-align: center;"
+                id="base">
+
+                <canvas id="lienzo" width="378" height="368"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md mt-2 mb-2 p-2">
+
+                <div class="container" id="obra">​
+
+                    <details>
+                        <summary style="background-color:rgb(251, 255, 0) ;"> Buscar Obra:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario" onSubmit="return validarBusquedaAdm()" action="ControlObra.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Ingrese alguno de los
+                                        siguientes datos para realizar la busqueda:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-1 ml-4 ml-1 p-1">
+
+                                            <label for="nit" style="font-weight: bold;"> NIT de la Organizacion:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-store-alt">
+
+                                                    <input type="text" name="nit" placeholder="NIT"
+                                                        id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-1 ml-1 p-1">
+
+                                            <label for="codigoObra" style="font-weight: bold;"> Codigo de la
+                                                obra:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-language">
+
+                                                    <input type="text" name="codigoObra" placeholder="Nombre de la obra"
+                                                        id="co1"></i>
+                                            </div>
+                                        </div>
+                                    
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+
+                                            <label for="añoInicio" style="font-weight: bold;">  Año en el que
+                                                inicio la obra:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="text" name="añoInicio" placeholder="aaaa" id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+
+                                            <label for="añoFinal" style="font-weight: bold;">  Año en el que
+                                                finaliza la obra:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="text" name="añoFinal" placeholder="aaaa" id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Buscar" class="button" name="buscar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                        
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+
+
+                <div class="container" id="afiliado">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 153, 0) ;"> Buscar Afiliado:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario1" onSubmit="return validarBusquedaAdm1()" action="ControlAfiliado.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Ingrese alguno de los
+                                        siguientes datos para realizar la busqueda:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-1 ml-4 p-1">
+
+                                            <label for="codigoAfiliado" style="font-weight: bold;"> Codigo del
+                                                afiliado:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="codigoAfiliado" placeholder="Codigo de Afiliado"
+                                                        id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-1 ml-1 p-1">
+
+                                            <label for="apellidoAfiliado" style="font-weight: bold;"> Apellidos del
+                                                afiliado:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="apellidoAfiliado" placeholder="Apellidos"
+                                                        id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-1 ml-1 p-1">
+
+                                            <label for="cedula" style="font-weight: bold;"> Numero de
+                                                cedula:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="cedula" placeholder="Cedula"
+                                                        id="co1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-1 ml-1 p-1">
+                                            <label for="UsuarioAfiliado" style="font-weight: bold;">Usuario:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="UsuarioAfiliado" placeholder="Usuario"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-3 ml-1 p-1">
+                                            <label for="contrasenaAfiliado" style="font-weight: bold;">Contraseña:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c1">
+
+                                                <i class="fas fa-key">
+                                                    &nbsp
+                                                    <input type="text" name="contrasenaAfiliado"
+                                                        placeholder="Contraseña"></i> </i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Buscar" class="button"  name="buscar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR" >
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+                <div class="container" id="Administrativo">​
+
+                    <details>
+                        <summary style="background-color: rgb(255, 51, 0);"> Buscar Administrativo:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario2" onSubmit="return validarBusquedaAdm2()" action="ControlAdministrativo.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Ingrese alguno de los
+                                        siguientes datos para realizar la busqueda:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Codigo Administrativo :</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c2">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="codigoAministrativo" placeholder="Nombres"
+                                                        id="co2"></i>
+                                            </div>
+                                        </div>
+
+                                      
+
+                                        <div class="col-md mt-2 ml-1 p-1">
+
+                                            <label for="cedula" style="font-weight: bold;"> Numero de
+                                                cedula:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c2">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="cedula" placeholder="Cedula"
+                                                        id="co2"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2  ml-1 p-1">
+                                            <label for="UsuarioAdministrativo" style="font-weight: bold;">Usuario:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c2">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="UsuarioAdministrativo"
+                                                        placeholder="Usuario" id="co2"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-1 p-1">
+                                            <label for="contrasenaAdministrativo" style="font-weight: bold;">Contraseña:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c2">
+
+                                                <i class="fas fa-key">
+
+                                                    <input type="text" name="contrasenaAdministrativo"
+                                                        placeholder="Contraseña" id="co2"></i> </i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md mt-2 mr-3  p-1">
+                                            <label for="rolAdministrativo" style="font-weight: bold;">Rol:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c2">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="text" name="rolAdministrativo" placeholder="Rol"
+                                                        id="co2"></i> </i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Buscar" class="button" name="buscar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+                <div class="container" id="Evento">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 0, 0);"> Buscar Evento:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario3" name="formulario3" onSubmit="return validoBusquedaAdm3()" action="ControlEventos.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Ingrese alguno de los
+                                        siguientes datos para realizar la busqueda:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Fecha de Rergistro:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c3">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp
+                                                    <input type="date" name="fechaRegistro" 
+                                                        id="co3"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-2  p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;">  Evento
+                                                :</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c3">
+
+                                                <i class="fas fa-search">
+                                                    &nbsp
+                                                    <select name="tipoEvento" id="co3">
+                                                        <option value="">....</option>
+                                                        <option value="1">Alquiler
+                                                        </option>
+                                                        <option value="2">Curso
+                                                        </option>
+                                                        <option value="3">Bazar</option>
+                                                        <option value="4">Brigada</option>
+                                                        <option value="5">Campeonato</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-2 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Codigo:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="c3">
+
+                                                <i class="fas fa-language">
+
+                                                    <input type="text" name="codigoEvento" placeholder="Cedula"
+                                                        id="co3"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4  p-1">
+                                            <label for="fInicio" style="font-weight: bold;">Codigo de administrativo:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="c3">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="codigoAdministrativo" placeholder="Cedula"
+                                                        id="co3"></i>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Buscar" class="button" name="buscar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                          
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+</html>

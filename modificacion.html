@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Modificacion
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <script type="application/Javascript" src="registro.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body onload="draw(); draw1();">
+    <div class="container" id="plano">​
+
+
+
+        <div class="row ">​
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingreso.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160"  style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);">
+                <div id="menu">
+
+                    <div class="btn-group">​​
+                        ​
+                                <button type="button" class="btn btn-light"> <a href="informacionAdm.html" id="a" >  Informacion</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="busqueda.html" id="a">Busqueda</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="consultaAdm.html" id="a">Consulta</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="registro.html" id="a">Registro</a> </button>​
+                                <button type="button" class="btn btn-secondary"> <a href="modificacion.html" id="a"
+                                    style="color: white;">Actualización</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="eventosAdm.html" id="a">Actividades</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="cuentasAdm.html" id="a">Rendición de cuentas</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="planeacionAdm.html" id="a">Plan de acción</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="ingreso.html" id="a">Cerrar Sesión</a> </button>​
+                    </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1">
+                <div class="alert alert-warning" style="margin-top: 5px;">​
+                    <strong>Recuerde!</strong> Solo podra hacer el proceso de registro si es miembro administrativo de
+                    la junta de acción comunal.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1 " style="background-color:rgb(255, 217, 0);">
+
+
+                <div id="menu2">
+
+                    <div class="btn-group" style="height: 40px; ">​
+
+                        <button type="button" class="btn btn-light" id="btn" style="width: 500px;">
+                            <a href="#obra" id="b"> <i class="fas fa-journal-whills" style="color: rgb(0, 0, 0);">&nbsp
+                                    &nbsp Formularios </i>
+                            </a>
+                        </button>​
+                    </div>​
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md-7 mt-2 mb-2 p-2" style="background-color:rgb(230, 238, 233); text-align: center;"
+                id="base">
+                <canvas id="lienzo" width="378" height="368"></canvas>
+            </div>
+
+        </div>
+
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md mt-2 mb-2 p-2">
+
+                <div class="container" id="obra">​
+
+                    <details>
+                        <summary style="background-color:rgb(251, 255, 0) ;"> Modificar Obra:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="form" onSubmit="return validarForm()" action="ControlObra.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar todas
+                                        las casillas (si va a llenar una fechaescribala aaaa-mm-dd)</label>
+
+                                    <div class="row ">​
+                                        <div class="col-md mt-2 ml-4 p-1">
+
+                                            <label for="codigoObra" style="font-weight: bold;"> Ingrese codigo de la
+                                                obra:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-language">
+
+                                                    <input type="text" name="codigoObra" placeholder="Codigo de la obra"
+                                                        id="da"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-1 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                modificar:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="far fa-hand-paper">
+                                                    &nbsp
+                                                    <select name="mobra" id="da">
+                                                        <option value="">....</option>
+                                                        <option value="0">Tipo de obra
+                                                        </option>
+                                                        <option value="1">Fecha de inicio
+                                                        </option>
+                                                        <option value="2">Fecha de finalizacion</option>
+                                                        <option value="3">Estado</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2  ml-1 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-eye-dropper">
+
+                                                    <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4  p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="cedulaRegistrante" placeholder="Cedula"
+                                                        id="da"></i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Modificar" class="button" name="modificar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="Limpiar">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+
+
+                <div class="container" id="afiliado">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 153, 0) ;"> Modificar Afiliado:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="form1" onSubmit="return validarForm1()" action="ControlAfiliado.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar todas
+                                        las casillas</label>
+
+                                    <div class="row ">​
+                                        <div class="col-md mt-2 ml-4 p-1">
+
+                                            <label for="cedula" style="font-weight: bold;"> Ingrese el numero de
+                                                cedula del Afiliado</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d1">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="cedula" placeholder="Cedula"
+                                                        id="da1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4  p-1">
+
+                                            <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d1">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="cedulaRegistrante" placeholder="Cedula"
+                                                        id="da1"></i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="nombre" style="font-weight: bold;"> Nombres:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="nombre" placeholder="Nombre Completo"
+                                                        id="con1"></i>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="apellido" style="font-weight: bold;" id="ap"> Apellidos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="apellido" placeholder="Apellido Completo"
+                                                        id="con1"> </i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="nacionalidad" style="font-weight: bold;"> Nacionalidad:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-map-marked-alt">
+                                                    &nbsp
+
+                                                    <input type="text" name="nacionalidad" placeholder="Nacionalidad"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="ciudadNacimiento" style="font-weight: bold;"> Ciudad de
+                                                Nacimiento:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-building">&nbsp &nbsp
+                                                    <input type="text" name="ciudadNacimiento"
+                                                        placeholder="Ciudad de nacimiento" id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="fechaNacimiento" style="font-weight: bold;"> Fecha de nacimiento:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-birthday-cake">&nbsp &nbsp
+                                                    <input type="date" id="con1" name="fechaNacimiento" min="1900-05-05"
+                                                        max="2030-05-05" required></i> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="sangre" style="font-weight: bold;"> Tipo de Sangre:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-user-md">&nbsp &nbsp
+
+                                                    <select name="tipoSangre" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="14">O+</option>
+                                                        <option value="18">O-</option>
+                                                        <option value="13">B+</option>
+                                                        <option value="17">B-</option>
+                                                        <option value="12">A+</option>
+                                                        <option value="16-">A-</option>
+                                                        <option value="15+">AB+</option>
+                                                        <option value="19">AB-</option>
+
+                                                    </select></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="telefonoFijo" style="font-weight: bold;"> Telefono Fijo:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-phone icon">&nbsp &nbsp
+                                                    <input type="text" name="telefonoFijo" placeholder="Telefono Fijo "
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="telefonoCelular" style="font-weight: bold;"> Telefono Celular:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-phone icon">&nbsp &nbsp
+                                                    <input type="text" name="telefonoCelular" placeholder="Telefono Celular"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="direccion" style="font-weight: bold;"> Direccion de
+                                                domicilio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="text" name="direccion" placeholder="Direccion"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="barrio" style="font-weight: bold;"> Barrio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="text" name="barrio" placeholder="Barrio" id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="ciudad" style="font-weight: bold;"> Ciudad:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">
+                                                    &nbsp
+                                                    <input type="text" name="ciudad" placeholder="Ciudad" id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="correo" style="font-weight: bold;"> Correo eletronivo:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-envelope icon">
+                                                    <input type="text" name="correo" placeholder="Ejemplo@ejemplo.com"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="estadoCivil" style="font-weight: bold;"> Estado civil:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-user-tie">&nbsp &nbsp
+                                                    <input type="radio" name="estadoCivil" value="52"
+                                                        id="soltero" /> <label for="soltero"
+                                                        style="color: black;">Soltero</label>
+                                                    <input type="radio" name="estadoCivil" value="51" id="casado" />
+                                                    <label for="casado" style="color: black;">Casado</label>
+                                                    <input type="radio" name="estadoCivil" value="53" id="otro" />
+                                                    <label for="otro" style="color: black;">Union Libre</label> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="profecion" style="font-weight: bold;"> Profecion, ocupación u
+                                                oficio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-user-graduate">
+                                                    <input type="text" name="profecion" placeholder="Profeción"
+                                                        id="con1"> </i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="numeroHijo" style="font-weight: bold;"> Numero de hijos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-baby"> &nbsp &nbsp
+                                                    <select name="numeroHijo" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="0">No tiene</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10 o mas</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="rangoEdades" style="font-weight: bold;"> Rango de edades de sus
+                                                hijos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-baby">&nbsp
+                                                    <input type="checkbox" name="rangoEdades[]" value="1" /> <label
+                                                        for="cine" style="color: black;">0-5</label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="2"
+                                                        style="margin-left: 20px;" /> <label for="6-11"
+                                                        style="color: black;">6-11 </label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="3"
+                                                        style="margin-left: 20px;" /> <label for="12-17"
+                                                        style="color: black;">12-17 </label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="4"
+                                                        style="margin-left: 20px;" /> <label for="18"
+                                                        style="color: black;"> 18 o más</label> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="adultoCuidado" style="font-weight: bold;"> Tiene adultos a su
+                                                cuidado:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-blind">&nbsp &nbsp
+                                                    <input type="radio" name="adultoCuidado" value="si" id="si" />
+                                                    <label for="si" style="color: black;">Si</label> &nbsp &nbsp &nbsp
+                                                    &nbsp
+                                                    <input type="radio" name="adultoCuidado" value="no" id="no" />
+                                                    <label for="no" style="color: black;">No</label></i> &nbsp &nbsp
+                                            </div>
+                                        </div>
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="viveCuantos" style="font-weight: bold;"> ¿Con cuantas personas
+                                                vive?</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <select name="viveCuantos" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="0">Vive solo</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10 o más</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="viveEn" style="font-weight: bold;">Vives en:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="radio" name="viveEn" value="100" id="casa" /> <label
+                                                        for="casa" style="color: black;">Casa</label> &nbsp &nbsp
+                                                    <input type="radio" name="viveEn" value="101"
+                                                        id="departamento" /> <label for="departamento"
+                                                        style="color: black;">Departamento</label></i>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="tipoVivienda" style="font-weight: bold;">Vives en casa :</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home"> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="202"
+                                                        id="familiar" /> <label for="familiar"
+                                                        style="color: black;">Familiar</label> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="201"
+                                                        id="alquiler" /> <label for="alquiler"
+                                                        style="color: black;">Alquiler</label> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="202"
+                                                        id="propia" /> <label for="propia"
+                                                        style="color: black;">Propia</label></i>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="genero" style="font-weight: bold;"> Genero:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-users"> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="301" id="Hombre" /> <label
+                                                        for="Hombre" style="color: black;">Hombre</label> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="300" id="Mujer" /> <label
+                                                        for="Mujer" style="color: black;">Mujer</label> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="302"
+                                                        id="Indefenido" /> <label for="Indefenido"
+                                                        style="color: black;">Indefenido</label></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="viveEn" style="font-weight: bold;">Estado:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <select name="estadoAfiliado" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="10">Activo</option>
+                                                        <option value="20">Inactivo</option>
+                                                    </select></i>
+
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+                                    </div>
+
+
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="Limpiar">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+                <div class="container" id="Administrativo">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 51, 0);"> Modificar Administrativo:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="form2" onSubmit="return validarForm2()" action="ControlAdministrativo.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar todas
+                                        las casillas</label>
+
+                                    <div class="row ">​
+                                        <div class="col-md mt-2 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Codigo administrativo:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="codigoAdministrativo" placeholder="Cedula"
+                                                        id="da"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-1 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                modificar:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="far fa-hand-paper">
+                                                    &nbsp
+                                                    <select name="aspecto" id="da">
+                                                        <option value="">....</option>
+                                                        <option value="1">Estado
+                                                        </option>
+                                                        <option value="2">Cantidad de años en el barrio</option>
+                                                        <option value="3">Rol</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2  ml-1 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-eye-dropper">
+
+                                                    <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-2  p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Codigo del Administrador:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="d">
+
+                                                <i class="fas fa-address-card icon">
+
+                                                    <input type="text" name="codigoAdmin" placeholder="Cedula"
+                                                        id="da"></i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="Limpiar">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+                <div class="container" id="Evento">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 0, 0) ;"> Modicar Evento:</summary>
+
+
+
+
+
+
+                        <details style="margin-left: 0px; margin-right: 12px;">
+
+                            <summary style="background-color:rgb(255, 19, 19); "> Alquiler:</summary>
+                            <div class="row ">​
+
+                                <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                    <form class="formulario" name="form7" onSubmit="return validarForm7()" action="ControlAlquiler.php" method="POST">
+
+                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                        <br>
+                                        <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar
+                                            todas
+                                            las casillas (si va a ingresar una fecha coloquela de la siguiente forma: aaaa-mm-dd)</label>
+
+                                        <div class="row ">​
+                                            <div class="col-md mt-2 ml-4 p-1">
+
+                                                <label for="codigoAlquiler" style="font-weight: bold;"> Codigo
+                                                    del Alquiler:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-language">
+
+                                                        <input type="text" name="codigoAlquiler" placeholder="Codigo"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 ml-1 p-1">
+
+                                                <label for="mobra" style="font-weight: bold;"> Aspeto a
+                                                    modificar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="far fa-hand-paper">
+                                                        &nbsp
+                                                        <select name="mobra" id="da">
+                                                            <option value="">....</option>
+                                                            <option value="1">Nombre del responsable
+                                                            </option>
+                                                            <option value="2">Apellido del responsable
+                                                            </option>
+                                                            <option value="3">Direccion </option>
+                                                            <option value="4">Telefono celular</option>
+                                                            <option value="5">Tipo de evento</option>
+
+                                                            <option value="6">Fecha del evento</option>
+                                                            <option value="7">Horas de alquiler</option>
+                                                            <option value="8">Abono</option>
+                                                            <option value="9">Costo del alquiler</option>
+                                                            <option value="10">Deposito </option>
+                                                            <option value="11">Utileria</option>
+
+                                                            <option value="12">Estado del alquiler</option>
+
+                                                        </select></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-eye-dropper">
+
+                                                        <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 mr-4  p-1">
+
+                                                <label for="codigoAdministritativo" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-address-card icon">
+
+                                                        <input type="text" name="codigoAdministritativo" placeholder="Cedula"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                                <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                                <div style="width: 10px; height: 10px;"> </div>
+                                                <input class="button" type="reset" value="Limpiar">
+                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                    privacidad.</p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </details>
+
+
+
+
+                        <details style="margin-right: 0px; margin-left: 0px;">
+
+                            <summary style="background-color:rgb(255, 81, 13); "> Curso:</summary>
+
+                            <div class="row ">​
+
+                                <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                    <form class="formulario" name="form7" onSubmit="return validarForm7()" action="ControlCurso.php" method="POST">
+
+                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                        <br>
+                                        <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar
+                                            todas
+                                            las casillas</label>
+
+                                        <div class="row ">​
+                                            <div class="col-md mt-2 ml-4 p-1">
+
+                                                <label for="codigoCurso" style="font-weight: bold;"> Codigo
+                                                    del Curso:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-language">
+
+                                                        <input type="text" name="codigoCurso" placeholder="Codigo"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            
+
+                                            <div class="col-md mt-2 ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                    modificar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="far fa-hand-paper">
+                                                        &nbsp
+                                                        <select name="mobra" id="da">
+                                                            <option value="">....</option>
+                                                            <option value="1">Nombre del Curso
+                                                            </option>
+                                                            <option value="2">Cantidad de horas
+                                                            </option>
+                                                            <option value="3">Nombre del Profesor</option>
+                                                            <option value="4">Direccion:</option>
+                                                            <option value="5">Telefono celular</option>
+
+                                                            <option value="6">Fecha del inicio</option>
+                                                            <option value="7">Fecha de finalizacion</option>
+                                                            <option value="8">Horario de la clase(días)</option>
+                                                            <option value="9">Horario de la clase(horas)</option>
+                                                            <option value="10">Tipo de curso </option>
+                                                            <option value="11">Costo del curso</option>
+                                                            <option value="12">Valor de cada clase</option>
+                                                            <option value="13">Ingreso para la JAC </option>
+                                                            <option value="14">Gastos de la JAC</option>
+                                                            <option value="15">Estado del curso</option>
+
+                                                        </select></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-eye-dropper">
+
+                                                        <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 mr-4  p-1">
+
+                                                <label for="codigoAdministritativo" style="font-weight: bold;"> Codigo del administrativo::</label>
+                                                <br>
+    
+                                                <div class="input-contenedor1" id="d">
+    
+                                                    <i class="fas fa-address-card icon">
+    
+                                                        <input type="text" name="codigoAdministritativo" placeholder="Cedula"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            
+
+
+                                        </div>
+                                       
+
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                                <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                                <div style="width: 10px; height: 10px;"> </div>
+                                                <input class="button" type="reset" value="Limpiar">
+                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                    privacidad.</p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details style="margin-left: 0px; margin-right: 12px;">
+
+                            <summary style="background-color:rgb(255, 133, 20); "> Bazar:</summary>
+                            <div class="row ">​
+
+                                <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                    <form class="formulario" name="form7" onSubmit="return validarForm7()" action="ControlBazar.php" method="POST">
+
+                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                        <br>
+                                        <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar
+                                            todas
+                                            las casillas</label>
+
+                                        <div class="row ">​
+                                            <div class="col-md mt-2 ml-4 p-1">
+
+                                                <label for="codigoBazar" style="font-weight: bold;"> Codigo
+                                                    del Bazar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-language">
+
+                                                        <input type="text" name="codigoBazar" placeholder="Codigo"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                    modificar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="far fa-hand-paper">
+                                                        &nbsp
+                                                        <select name="mobra" id="da">
+                                                            <option value="">....</option>
+                                                            <option value="1">Codigo del responsable </option>
+                                                            <option value="2">Fecha del evento</option>
+                                                            <option value="3">Hora de inicio del evento</option>
+                                                            <option value="4">Hora de finalizacion del evento</option>
+                                                            <option value="5">Dinero Gastado</option>
+                                                            <option value="6">Dinero recaudado</option>
+                                                            <option value="7">Gropos involucrados</option>
+                                                            <option value="8">Estado del evento</option>
+
+                                                        </select></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-eye-dropper">
+
+                                                        <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 mr-4  p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-address-card icon">
+
+                                                        <input type="text" name="cedulaRegistrante" placeholder="Cedula"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                                <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                                <div style="width: 10px; height: 10px;"> </div>
+                                                <input class="button" type="reset" value="Limpiar">
+                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                    privacidad.</p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </details>
+
+
+                        <details style="margin-left: 0px; margin-right: 12px;">
+
+                            <summary style="background-color:rgb(255, 174, 24); "> Brigada:</summary>
+
+                            <div class="row ">​
+
+                                <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                    <form class="formulario" name="form7" onSubmit="return validarForm7()" action="ControlBrigada.php" method="POST">
+
+                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                        <br>
+                                        <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar
+                                            todas
+                                            las casillas</label>
+
+                                        <div class="row ">​
+                                            <div class="col-md mt-2 ml-4 p-1">
+
+                                                <label for="codigoBrigada" style="font-weight: bold;"> Codigo
+                                                    de la Brigada:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-language">
+
+                                                        <input type="text" name="codigoBrigada" placeholder="Codigo"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                    modificar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="far fa-hand-paper">
+                                                        &nbsp
+                                                        <select name="mobra" id="da">
+                                                            <option value="">....</option>
+                                                            <option value="1">Nombre del responsable
+                                                            </option>
+                                                            <option value="2">Apellido del responsable
+                                                            </option>
+                                                            <option value="3">Direccion</option>
+                                                            <option value="4">Telefono celular</option>
+                                                            <option value="5">Tipo de Brigada</option>
+                                                            <option value="6">Fecha de la brigada</option>
+                                                            <option value="7">Hora de inicio de la brigada</option>
+                                                            <option value="8">Hora de finalizacion de la brigada
+                                                            </option>
+                                                            <option value="9">Estado del evento</option>
+
+                                                        </select></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-eye-dropper">
+
+                                                        <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 mr-4  p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-address-card icon">
+
+                                                        <input type="text" name="cedulaRegistrante" placeholder="Cedula"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                                <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                                <div style="width: 10px; height: 10px;"> </div>
+                                                <input class="button" type="reset" value="Limpiar">
+                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                    privacidad.</p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </details>
+                        <details style="margin-left: 0px; margin-right: 12px;">
+
+                            <summary style="background-color:rgb(255, 231, 17); "> Campeonato:</summary>
+
+                            <div class="row ">​
+
+                                <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                    <form class="formulario" name="form7" onSubmit="return validarForm7()" action="ControlCampeonato.php" method="POST">
+
+                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                        <br>
+                                        <label for="busqueda" style="font-weight: bold; color: #000;">Recuerde llenar
+                                            todas
+                                            las casillas</label>
+
+                                        <div class="row ">​
+                                            <div class="col-md mt-2 ml-4 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Codigo
+                                                    del Campeonato:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-language">
+
+                                                        <input type="text" name="codigoCampeonato" placeholder="Codigo"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Aspeto a
+                                                    modificar:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="far fa-hand-paper">
+                                                        &nbsp
+                                                        <select name="mobra" id="da">
+                                                            <option value="">....</option>
+                                                            <option value="1">Nombre del campeonato
+                                                            </option>
+                                                            <option value="2">Participantes
+                                                            </option>
+                                                            <option value="3">Nombre del responsable</option>
+                                                            <option value="4">Apellido del responsable</option>
+                                                            
+                                                            <option value="5">Direccion del responsable</option>
+                                                            <option value="6">Telefono celular</option>
+                                                            <option value="7">Costo por persona</option>
+                                                            <option value="8">Dinero Gastado por la JAC</option>
+                                                            <option value="9">Fecha del inicio</option>
+                                                            <option value="10">Fecha de finalizacion</option>
+                                                            <option value="11">Horario del Campeonato (dias)</option>
+                                                            <option value="12">Horario del Campeonato (Hora)</option>
+                                                            <option value="13">Estado del evento</option>
+
+                                                        </select></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2  ml-1 p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Valor:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-eye-dropper">
+
+                                                        <input type="text" name="valor" placeholder="Valor" id="da"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md mt-2 mr-4  p-1">
+
+                                                <label for="nombreObra" style="font-weight: bold;"> Codigo del administrativo:</label>
+                                                <br>
+
+                                                <div class="input-contenedor1" id="d">
+
+                                                    <i class="fas fa-address-card icon">
+
+                                                        <input type="text" name="cedulaRegistrante" placeholder="Cedula"
+                                                            id="da"></i>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                                <input type="submit" value="Enviar" class="button" name="modificar">
+
+                                                <div style="width: 10px; height: 10px;"> </div>
+                                                <input class="button" type="reset" value="Limpiar">
+                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                    privacidad.</p>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row ">​
+
+                                            <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </details>
+                    </details>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+</html>

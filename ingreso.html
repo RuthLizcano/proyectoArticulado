@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bienvenida
+        </title>
+        <meta charset=utf-8 />
+        <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+        <link rel="stylesheet" type="text/css" href="ingreso.css">
+        <script type="application/Javascript" src="ingreso.js"> </script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    </head>
+<body onload="draw(); draw1();">
+    <div class="container" id="plano">​
+
+        <div class="row ">​
+
+            <div class="col-md  p-7"  >
+                
+                <div id="logo">
+                    <a href="ingreso.html" id="c"  >  <figure >  <img src="xxx3.png"  width="145" height="160"  style="filter: contrast(175%);"/>  </figure></a> 
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row justify-content-end">​
+
+            <div class="col-md p-2 " style="background-color:  rgb(255, 217, 0);" >
+                <div id="menu" >
+
+                    <div class="btn-group">​
+                        <button type="button" class="btn btn-light"> <a href="informacion.html" id="a" >  Informacion</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="eventos.html" id="a">Actividades</a> </button>​
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" style="color: rgb(160, 0, 0);">​
+                           Acceder
+                        </button>​
+                        <div class="dropdown-menu">​
+                          <a class="dropdown-item" href="loginvista.html" style="color: rgb(160, 0, 0);" >Ingresar</a>​
+                          <a class="dropdown-item" href="registrarvista.html" style="color: rgb(160, 0, 0);">Registrarse</a>​
+                        </div>​
+                      </div>​
+
+                </div>
+                
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="row  justify-content-md-center">​
+
+            <div class="col-md-7 p-7 mt-2" style="background-color: rgb(230, 238, 233); border: black; text-align: center;" >
+                    
+                    <canvas id="lienzo" width="350" height="350" ></canvas>
+      
+            </div>
+        </div>
+
+        <div class="row  justify-content-md-center" style="border: black;">​
+
+            <div class="col-md p-2 mt-2" style="background-color: rgb(255, 217, 0);" >
+                <h3 id="h3"> Nuestra comunidad</h3>
+                </div>
+        </div>
+
+        <div class="row  justify-content-md-center" style="border: black;">​
+            
+            <div class="col-md   mt-2" style="background-color: rgb(147, 177, 159);" id="not" >
+                <figure id="f1">  <img src="noticia.jpg"  width="640" height="319"  />  </figure>
+                <p id="p1">
+                    Todas las noticias del salon comunal <br> 
+                </p>
+                <p id="p11">
+                    <br> las podra encontrar en información
+                </p>
+
+                <button type="button" class="btn btn-danger" id="btninfo"><a href="informacion.html" id="b" >Informacion</a></button>​
+
+                </div>
+
+             <div class="col-md p-4 mt-2" style="background-color: rgba(255, 255, 255, 0.876);" >
+              <p id="p2"> 
+                 " Los cambios empiezan <br> por <br> cada uno de nosotros  "
+              </p>
+                </div>
+            
+        </div>
+
+
+
+        <div class="row  justify-content-md-center" style="border: black;">​
+
+            <div class="col-md p-1 mt-2 " style="background-color:  rgb(255, 217, 0);" id="final" >
+                <div id="sugerencia">
+                    <figure id="ulimg">  <a href="Sugerencias.html"  id="c"> <img src="buzon.png"  width="50" height="50" style="margin-right: 10px;" />  Sugerencias</a> </figure>
+                 </div> 
+                    
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h4 id="h4" >Contactenos  
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+    
+
+</html>

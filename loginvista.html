@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login
+        </title>
+        <meta charset=utf-8 />
+        <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+        <link rel="stylesheet" type="text/css" href="ingreso.css">
+        <script type="application/Javascript" src="ingresopp.js"> </script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="estilos1.css">
+    </head>
+<body onload="draw(); draw1();">
+    <div class="container" id="plano">​
+
+        <div class="row ">​
+
+            <div class="col-md  p-7"  >
+                
+                <div id="logo">
+                    <a href="ingreso.html" id="c"  >  <figure >  <img src="xxx3.png"  width="145" height="160"   style="filter: contrast(175%);"/>  </figure></a> 
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row justify-content-end">​
+
+            <div class="col-md p-2 " style="background-color:  rgb(255, 217, 0);" >
+                
+                
+            </div>
+
+        </div>
+  
+        <div class="row  justify-content-md-center">​
+            
+
+            <div class="col-md-9 p-3 mt-4 mb-2" style="background-color: rgb(230, 238, 233); border: black; text-align: center;" >
+
+                 <div class="row justify-content-md-center ">​
+
+                    <div class="btn btn-danger" style="margin-top: -15px;"><h2>Bienvenido por favor ingrese sus datos de usuario</h2> </div>​
+
+                 </div>
+                 
+                <form class="formulario" name="form1" onSubmit="return validarFormulario1()" action="Controladorp.php" method="POST" >
+
+                    <div style="border: 5px solid rgb(255, 217, 0);">
+               
+                        <h1>Login</h1>
+                        <figure>  <img src="xxx3.png"  width="205" height="220" />  </figure>
+
+
+                        <div style="margin-left: 10px; margin-right: 10px;">
+
+                           <div class="input-contenedor1">
+                            
+                              <i class="fas fa-user icon"></i>
+                               <input type="text" name="usuario" placeholder="Usuario" >
+                            </div>
+                        
+                             <div class="input-contenedor2">
+                              <i class="fas fa-key icon"></i>
+                             <input type="password" name="contrasena" placeholder="Contraseña">
+            
+                             </div>
+                
+             
+                           <input type="submit" value="Login" class="button" name="anexar">
+                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+
+                         </div>
+                         <p style="margin-bottom: 10px;"> ¿No tienes una cuenta? <a class="link" href="registrarvista.html">Registrate </br> </a></p>
+                     </div> 
+
+                </form>
+
+            </div>
+        </div>
+        
+      
+    
+        <div class="row  justify-content-md-center" style="border: black;">​
+
+            <div class="col-md p-1 mt-2 " style="background-color:  rgb(255, 217, 0);" id="final" >
+                <div id="sugerencia">
+                    <figure id="ulimg">  <a href="sugerencias.html"  id="c"> <img src="buzon.png"  width="50" height="50" style="margin-right: 10px;" />  Sugerencias</a> </figure>
+                 </div> 
+                    
+            </div>
+        </div>
+         
+
+
+    </div>
+         <footer>
+             <h4 id="h4" >Contactenos  
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+          </footer>
+</body>
+    
+
+</html>

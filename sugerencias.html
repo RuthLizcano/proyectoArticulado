@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Sugerencias
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="Sugerencias.css">
+    <script type="application/Javascript" src="ingresopp.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body onload="draw(); draw1();">
+    <div class="container" id="plano">​
+
+        <div class="row ">​
+
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingreso.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160"  style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row justify-content-end">​
+
+            <div class="col-md p-2 " style="background-color:  rgb(255, 217, 0);">
+                
+
+            </div>
+
+        </div>
+
+        <div class="row  justify-content-md-center">​
+
+
+            <div class="col-md-9 p-3 mt-4 mb-2"  style="background-color: rgb(230, 238, 233); border: black; text-align: center; height: 715px;">
+
+                <div class="row justify-content-md-center ">​
+                    <div class="btn btn-danger" style="margin-top: -15px;">
+                        <h2>Bienvenido por favor ingrese su sugerencia</h2>
+                    </div>​
+                </div>
+
+                <form class="formulario" name="form1" onSubmit="return validarFormulario3()" action="ControlS.php" method="POST">
+
+                    <div style="border: 5px solid rgb(255, 217, 0);">
+                        <h1>Sugerencias</h1>
+                        <figure> <img src="xxx3.png"  width="205" height="220" /> </figure>
+                            <div class="row ">​
+
+                                <div class="col-md mt-2 mb-2 mr-2 ml-2">
+
+                                    <label for="nombre" style="font-weight: bold;"> Nombre:</label>
+                                    <br>
+                                    <div class="input-contenedor1" id="c1">
+                                        <i class="fas fa-user icon"></i>
+                                        <input type="text" name="nombre" placeholder="Nombre" id="c">
+                                    </div>
+                                </div>
+
+                                <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                    <label for="correo" style="font-weight: bold;"> Correo:</label>
+                                    <br>
+                                    <div class="input-contenedor1" id="c1">
+                                        <i class="fas fa-envelope icon"></i>
+                                        <input type="text" name="correo" placeholder="Correo Electronico" id="c">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ">​
+                                <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                    <label for="sugerencia" style="font-weight: bold;"> Sugerencia:</label>
+                                    <br>
+                                    <div class="input-contenedor1" id="c2">
+                                        <i class="fas fa-envelope icon"></i>
+                                        <textarea id="mensaje" name="mensaje" class="form-textarea"
+                                            placeholder="Aqui escriba sus sugerencias"></textarea></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ">​
+                                <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                    <input type="submit" value="Enviar" class="button" name="anexar">
+                                    <p>Aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                                </div>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-end">​
+
+            <div class="col-md p-2 " style="background-color:  rgb(255, 217, 0);">
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+
+</html>

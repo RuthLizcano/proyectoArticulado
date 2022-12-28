@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+   background: url(pies.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#plano
+{
+   
+    background-color:rgba(255, 255, 255, 0.726);
+   
+}
+#logo
+{
+    float: left; 
+    
+    margin-left: 30px;
+    margin-top: -20px;
+
+}
+#letra{
+
+    height: 80px;
+    float: right;
+    margin-left: -20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+#h4{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    }    
+#menu
+    {
+        float: right; 
+        margin-right: 5px; 
+    }
+
+#a{
+        color:   rgb(160, 0, 0);
+    
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+#c1{
+height: 500px;
+}
+#c2{
+height: 500px;
+}
+#c3{
+height: 500px;
+}
+#i1{
+    margin-top: -20px;
+    margin-left: -1px;
+    height: 50px;
+
+}
+#p1{
+    font-size: 20px;
+    margin-left: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+#i2{
+    height: 340;
+    margin-left: 1px;
+}
+#i3{
+    height: 180px;
+    margin-top: -80px;
+
+}
+#p2{
+    color: rgb(251, 255, 0);
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#p3{
+    margin-top: -5px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

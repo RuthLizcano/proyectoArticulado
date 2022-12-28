@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Registro
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <script type="application/Javascript" src="registro.js"> </script>
+    <script type="application/Javascript" src="validadorforms1.js"> </script>
+    <script type="application/Javascript" src="validarFormulario2.js"> </script>
+    <script type="application/Javascript" src="validadorform3.js"> </script>
+    <script type="application/Javascript" src="validadorform4.js"> </script>
+    <script type="application/Javascript" src="validadorform5.js"> </script>
+    <script type="application/Javascript" src="validadorform6.js"> </script>
+    <script type="application/Javascript" src="validadorform7.js"> </script>
+    <script type="application/Javascript" src="validadorform8.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body onload="draw(); draw1();">
+
+    <div class="container" id="plano">​
+        <div class="row ">​
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingreso.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160" style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);">
+                <div id="menu">
+
+                    <div class="btn-group">​​
+                        ​
+                                <button type="button" class="btn btn-light"> <a href="informacionAdm.html" id="a" >  Informacion</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="busqueda.html" id="a">Busqueda</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="consultaAdm.html" id="a">Consulta</a> </button>​
+                                <button type="button" class="btn btn-secondary"> <a href="registro.html" id="a"
+                                    style="color: white;">Registro</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="modificacion.html" id="a"
+                                   >Actualización</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="eventosAdm.html" id="a">Actividades</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="cuentasAdm.html" id="a">Rendición de cuentas</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="planeacionAdm.html" id="a">Plan de acción</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="ingreso.html" id="a">Cerrar Sesión</a> </button>​
+                    </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1">
+                <div class="alert alert-warning" style="margin-top: 5px;">​
+                    <strong>Recuerde!</strong> Solo podra hacer el proceso de registro si es miembro administrativo de
+                    la junta de acción comunal.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1 " style="background-color:rgb(255, 217, 0);">
+
+
+                <div id="menu2">
+
+                    <div class="btn-group" style="height: 40px; ">​
+
+                        <button type="button" class="btn btn-light" id="btn" style="width: 500px;">
+                            <a href="#obra" id="b"> <i class="fas fa-journal-whills" style="color: rgb(0, 0, 0);">&nbsp
+                                    &nbsp Formularios </i>
+                            </a>
+                        </button>​
+                    </div>​
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md-7 mt-2 mb-2 p-2" style="background-color:rgb(230, 238, 233); text-align: center;"
+                id="base">
+
+                <canvas id="lienzo" width="378" height="368"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md mt-1 mb-2 p-2">
+
+                <div class="container" id="obra">​
+
+                    <details>
+
+
+
+                        <summary style="background-color:rgb(251, 255, 0) ;"> Registrar Nueva Obra:</summary>
+
+
+
+
+                        <div class="row ">​
+
+                            <div class="col-md " style="background-color:rgba(255, 255, 255, 0.774);" id="rol3">
+
+                                <form class="formulario" name="form3" onSubmit="return validarFormulario1()" action="ControlObra.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 p-1">
+                                            <label for="nombreObra" style="font-weight: bold;"> Nombre de la
+                                                obra:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="far fa-building">
+                                                    &nbsp &nbsp
+                                                    <input type="text" name="nombreObra" 
+                                                    name="letras" onkeypress="return validar(event)"
+                                                    onpaste =" return false" placeholder="Nombre de la obra"
+                                                        id="con3"  ></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+                                            <label for="tipoObra" style="font-weight: bold;"> Tipo de obra:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="far fa-building">
+                                                    &nbsp &nbsp
+                                                    <input type="text" name="tipoObra"
+                                                     name="letras" onkeypress="return validar(event)" 
+                                                      onpaste =" return false" placeholder="Tipo de obra"
+                                                        id="con3" ></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 p-1">
+                                            <label for="nombreOrganizacion" style="font-weight: bold;" re > Organización que la
+                                                realiza:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="fas fa-store-alt">
+                                                    &nbsp
+                                                    <input type="text" name="nombreOrganizacion"
+                                                     name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false" placeholder="Organizacion"
+                                                        id="con3"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+                                            <label for="nit" style="font-weight: bold;"> NIT:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="fas fa-store-alt">
+                                                    &nbsp
+                                                    <input type="text"  name="nit" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false" placeholder="NIT" id="con3"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 p-1">
+                                            <label for="fInicio" style="font-weight: bold;"> Fecha de inicio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="far fa-calendar">
+                                                    &nbsp &nbsp
+                                                    <input type="date" id="con3" name="fechaInicio" min="2020-05-05"
+                                                        max="2030-05-05"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+                                            <label for="fFinal" style="font-weight: bold;"> Fecha de
+                                                finalizacion:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="far fa-calendar-check">
+                                                    &nbsp &nbsp
+                                                    <input type="date" id="con3" name="fechaFinal" min="2020-05-05"
+                                                        max="2030-05-05"></i> </i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 p-1">
+                                            <label for="estado" style="font-weight: bold;"> Estado:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="fas fa-city">
+                                                    &nbsp
+                                                    <input type="text" name="estado"
+                                                     name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false" placeholder="Estado" id="con3"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+                                            <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont2">
+
+                                                <i class="fas fa-address-card icon">
+                                                    &nbsp
+                                                    <input type="text" name="cedulaRegistrante"
+                                                    name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false" placeholder="Codigo del administrativo"
+                                                        id="con3"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Registrar" class="button" name="anexar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </details>
+                </div>
+
+                <div class="container" id="afiliado">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 153, 0) ;"> Registrar Nuevo Afiliado:</summary>
+                        <div class="row ">​
+
+
+                            <div class="col-md p-2 mb-3" style="background-color:rgba(255, 255, 255, 0.774);">
+
+
+
+                                <form class="formulario" name="form1" onSubmit="return validarFormulario2()" action="ControlAfiliado.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="nombre" style="font-weight: bold;"> Nombres:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="nombre" 
+                                                    name="letras" onkeypress="return validar(event)"
+                                                     onpaste =" return false" placeholder="Nombre Completo"
+                                                        id="con1" ></i>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="apellido" style="font-weight: bold;" id="ap"> Apellidos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="apellido"
+                                                     name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false" placeholder="Apellido Completo"
+                                                        id="con1"> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="cedula" style="font-weight: bold;"> Numero de cedula:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-address-card icon">
+                                                    &nbsp
+
+                                                    <input type="text" name="cedula" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false"
+                                                    placeholder="Cedula"
+                                                        id="con1" ></i><i class="far fa"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="nacionalidad" style="font-weight: bold;"> Nacionalidad:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-map-marked-alt">
+                                                    &nbsp
+
+                                                    <input type="text" name="nacionalidad"
+                                                     name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false" placeholder="Nacionalidad"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="ciudadNacimiento" style="font-weight: bold;"> Ciudad de
+                                                Nacimiento:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-building">&nbsp &nbsp
+                                                    <input type="text" name="ciudadNacimiento"
+                                                        placeholder="Ciudad de nacimiento"
+                                                         name="letras" onkeypress="return validar(event)" 
+                                                          onpaste =" return false"id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="fechaNacimiento" style="font-weight: bold;"> Fecha de nacimiento:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont"  > 
+
+                                                <i class="fas fa-birthday-cake">&nbsp &nbsp
+                                                    <input type="date" id="con1" name="fechaNacimiento" min="1900-05-05"
+                                                        max="2030-05-05" ></i> </i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="sangre" style="font-weight: bold;"> Tipo de Sangre:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont" name="tipoSangre">
+                                                &nbsp
+                                                <i class="fas fa-user-md">&nbsp &nbsp
+
+                                                    <select name="tipoSangre" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="14">O+</option>
+                                                        <option value="18">O-</option>
+                                                        <option value="13">B+</option>
+                                                        <option value="17">B-</option>
+                                                        <option value="12">A+</option>
+                                                        <option value="16-">A-</option>
+                                                        <option value="15+">AB+</option>
+                                                        <option value="19">AB-</option>
+
+                                                    </select></i>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="telefonoFijo" style="font-weight: bold;"> Telefono Fijo:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-phone icon">&nbsp &nbsp
+                                                    <input type="text" name="telefonoFijo" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false"  placeholder="Telefono Fijo "
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="telefonoCelular" style="font-weight: bold;"> Telefono Celular:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-phone icon">&nbsp &nbsp
+                                                    <input type="text" name="telefonoCelular" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false" placeholder="Telefono Celular"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="direccion" style="font-weight: bold;"> Direccion de
+                                                domicilio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="text" name="direccion"  onpaste =" return false" 
+                                                    placeholder="Direccion"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="barrio" style="font-weight: bold;"> Barrio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="text" name="barrio" 
+                                                    name="letras" onkeypress="return validar(event)"
+                                                     onpaste =" return false" placeholder="Barrio" id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="ciudad" style="font-weight: bold;"> Ciudad:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-home">
+                                                    &nbsp
+                                                    <input type="text" name="ciudad" name="letras" onkeypress="return validar(event)"
+                                                     onpaste =" return false" placeholder="Ciudad" id="con1"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="correo" style="font-weight: bold;"> Correo eletronico:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+
+                                                <i class="fas fa-envelope icon">
+                                                    <input type="email" name="correo"
+                                                     onpaste =" return false" placeholder="Ejemplo@ejemplo.com"
+                                                        id="con1"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="estadoCivil" style="font-weight: bold;"> Estado civil:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont" >
+                                                &nbsp
+                                                <i class="fas fa-user-tie">&nbsp &nbsp
+                                                    <input type="radio" name="estadoCivil" value="52"
+                                                        id="soltero" /> <label for="soltero"
+                                                        style="color: black;">Soltero</label>
+                                                    <input type="radio" name="estadoCivil" value="51" id="casado" />
+                                                    <label for="casado" style="color: black;">Casado</label>
+                                                    <input type="radio" name="estadoCivil" value="53" id="otro" />
+                                                    <label for="otro" style="color: black;">Union Libre</label> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="profecion" style="font-weight: bold;"> Profecion, ocupación u
+                                                oficio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-user-graduate">
+                                                    <input type="text" name="profecion"
+                                                      name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false" placeholder="Profeción"
+                                                        id="con1"> </i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="hijos" style="font-weight: bold;"> Numero de hijos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-baby"> &nbsp &nbsp
+                                                    <select name="numeroHijo" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="0">No tiene</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10 o mas</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="rangoEdades" style="font-weight: bold;"> Rango de edades de sus
+                                                hijos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-baby">&nbsp
+                                                    <input type="checkbox" name="rangoEdades[]" value="1" /> <label
+                                                        for="cine" style="color: black;">0-5</label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="2"
+                                                        style="margin-left: 20px;" /> <label for="6-11"
+                                                        style="color: black;">6-11 </label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="3"
+                                                        style="margin-left: 20px;" /> <label for="12-17"
+                                                        style="color: black;">12-17 </label>
+                                                    <input type="checkbox" name="rangoEdades[]" value="4"
+                                                        style="margin-left: 20px;" /> <label for="18"
+                                                        style="color: black;"> 18 o más</label> </i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="adultoCuidado" style="font-weight: bold;"> Tiene adultos a su
+                                                cuidado:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-blind">&nbsp &nbsp
+                                                    <input type="radio" name="adultoCuidado" value="si" id="si" />
+                                                    <label for="si" style="color: black;">Si</label> &nbsp &nbsp &nbsp
+                                                    &nbsp
+                                                    <input type="radio" name="adultoCuidado" value="no" id="no" />
+                                                    <label for="no" style="color: black;">No</label></i> &nbsp &nbsp
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="viveCuantos" style="font-weight: bold;"> ¿Con cuantas personas
+                                                vive?</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <select name="viveCuantos" id="v">
+                                                        <option value="">....</option>
+                                                        <option value="0">Vive solo</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10 o más</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="viveEn" style="font-weight: bold;">Vives en:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home">&nbsp &nbsp
+                                                    <input type="radio" name="viveEn" value="100" id="casa" /> <label
+                                                        for="casa" style="color: black;">Casa</label> &nbsp &nbsp
+                                                    <input type="radio" name="viveEn" value="101"
+                                                        id="departamento" /> <label for="departamento"
+                                                        style="color: black;">Departamento</label></i>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="tipoVivienda" style="font-weight: bold;">Vives en casa :</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-home"> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="202"
+                                                        id="familiar" /> <label for="familiar"
+                                                        style="color: black;">Familiar</label> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="201"
+                                                        id="alquiler" /> <label for="alquiler"
+                                                        style="color: black;">Alquiler</label> &nbsp &nbsp
+                                                    <input type="radio" name="tipoVivienda" value="202"
+                                                        id="propia" /> <label for="propia"
+                                                        style="color: black;">Propia</label></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="genero" style="font-weight: bold;"> Genero:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-users"> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="301" id="Hombre" /> <label
+                                                        for="Hombre" style="color: black;">Hombre</label> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="300" id="Mujer" /> <label
+                                                        for="Mujer" style="color: black;">Mujer</label> &nbsp &nbsp
+                                                    <input type="radio" name="genero" value="302"
+                                                        id="Indefenido" /> <label for="Indefenido"
+                                                        style="color: black;">Indefenido</label></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="etnia" style="font-weight: bold;"> ¿Pertenece a alguna etnia,
+                                                grupo indígena o comunidad negra?</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont">
+                                                &nbsp
+                                                <i class="fas fa-users">&nbsp &nbsp &nbsp
+                                                    <input type="radio" name="etnia" value="si" id="si" /> <label
+                                                        for="si" style="color: black;">Si</label> &nbsp &nbsp &nbsp
+                                                    &nbsp
+                                                    <input type="radio" name="etnia" value="no" id="no" /> <label
+                                                        for="no" style="color: black;">No</label></i> &nbsp &nbsp
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="intereses" style="font-weight: bold;"> Intereses:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="contt">
+                                                &nbsp
+                                                <i class="fas fa-futbol">
+                                                    &nbsp
+                                                    <textarea id="mensaje" name="intereses"
+                                                     name="letras" onkeypress="return validarText(event)"
+                                                      onpaste =" return false" class="form-textarea" 
+                                                        placeholder="Aqui escriba sus intereses"></textarea></i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Enviar" class="button" name="anexar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="Limpiar">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </form>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="container" id="directivo">​
+                    <details>
+
+
+
+                        <summary style="background-color: rgb(255, 51, 0);"> Registrar Nuevo Administrativo:</summary>
+
+
+
+
+
+                        <div class="row ">​
+
+                            <div class="col-md " style="background-color:rgba(255, 255, 255, 0.774);" id="rol5">
+
+
+
+                                <form class="formulario" name="form2" onSubmit="return validarFormulario3()" action="ControlAdministrativo.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="nombre" style="font-weight: bold;"> Nombres:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="nombre" 
+                                                      name="letras" onkeypress="return validar(event)"
+                                                      onpaste =" return false"
+                                                     placeholder="Nombre Completo"
+                                                        id="con2"></i>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="apellido" style="font-weight: bold;" id="ap"> Apellidos:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="apellido" 
+                                                    name="letras" onkeypress="return validar(event)"
+                                                     onpaste =" return false" placeholder="Apellido Completo"
+                                                        id="con2"> </i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row ">​
+
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="cedula" style="font-weight: bold;"> Numero de cedula:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-address-card icon">
+                                                    &nbsp
+
+                                                    <input type="text" name="cedula" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                     onpaste =" return false"  onpaste =" return false" placeholder="Cedula"
+                                                        id="con2"></i><i class="far fa"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="anosBarrio" style="font-weight: bold;"> Cantidad de años en el
+                                                barrio:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-building">&nbsp &nbsp
+                                                    <input type="text" name="anosBarrio" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                    onpaste =" return false"  onpaste =" return false"
+                                                        placeholder="Cantidad de años en el barrio" id="con2"></i>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-2 ml-4 mb-2 p-1 ">
+                                            <label for="rol" style="font-weight: bold;"> Rol:</label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-user icon">
+                                                    &nbsp &nbsp
+
+                                                    <input type="text" name="rol" name="letras" 
+                                                    onkeypress="return validar(event)"
+                                                    onpaste =" return false" placeholder="Rol" id="con2"></i>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md mt-2 mr-4 ml-4 mb-2 p-1 ">
+                                            <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo: </label>
+                                            <br>
+                                            <div class="input-contenedor1" id="cont1">
+
+                                                <i class="fas fa-address-card icon">
+                                                    &nbsp
+
+                                                    <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                    onkeypress="return validarNumeros(event)"
+                                                    onpaste =" return false"  placeholder="Codigo del administrativo"
+                                                        id="con2"></i><i class="far fa"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Registrate" class="button" name="anexar">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </form>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </details>
+                </div>
+
+
+
+
+                <div class="container" id="evento">​
+
+
+
+
+                    <details>
+
+
+
+                        <summary style="background-color:rgb(255, 0, 0) ;"> Registrar Nuevo Evento:</summary>
+
+
+
+
+                        <div class="row ">​
+
+
+
+                            <div class="col-md p-2 mb-2 " style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <details style="margin-left: 8px; margin-right: 12px;">
+
+                                    <summary style="background-color:rgb(255, 19, 19); "> Alquiler:</summary>
+
+                                    <div class="row ">​
+
+
+                                        <div class="col-md p-1 mt-4 mb-2 mr-4 ml-4 "
+                                            style="background-color:rgb(153, 153, 153);" id="alquiler1">
+
+
+
+                                            <div class="row ">​
+
+
+                                                <div class="col-md-3 p-1   mr-4 ml-4 "
+                                                    style="background-color:rgb(255, 19, 19); ">
+
+
+                                                    <div id="l">
+                                                        <h2>Alquiler del Salon Comunal</h2>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md p-1  mb-2 mr-4 ml-2 ">
+
+                                                    <form class="formulario" name="form4"
+                                                        onSubmit="return validarFormulario4()" action="ControlAlquiler.php" method="POST" enctype="multipart/form-data" >
+
+                                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                                        <br>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreResponsable" style="font-weight: bold;"> Nombre
+                                                                    del responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreResponsable"
+                                                                           name="letras" onkeypress="return validar(event)"
+                                                                           onpaste =" return false" placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="apellidoResponsable" style="font-weight: bold;"
+                                                                    id="ap"> Apellido del responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="apellidoResponsable"
+                                                                           name="letras" onkeypress="return validar(event)"
+                                                                            onpaste =" return false" placeholder="Apellido Completo" id="con4">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="cedulaResponsable" style="font-weight: bold;"> Numero
+                                                                    de cedula:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+                                                                        <input type="text" name="cedulaResponsable" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="Cedula" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="direccion" style="font-weight: bold;">
+                                                                    Direccion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-home">&nbsp &nbsp
+                                                                        <input type="text" name="direccion"
+                                                                            onpaste =" return false" placeholder="Direccion" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="telefonoCelular" style="font-weight: bold;">
+                                                                    Telefono celular:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-phone icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="telefonoCelular" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="Telefono celular"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="tipoEvento" style="font-weight: bold;">
+                                                                    Tipo de evento:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-alt">
+                                                                        &nbsp &nbsp
+
+                                                                        <select name="tipoEvento" id="con4">
+                                                                            <option value="">....</option>
+                                                                            <option value="Quince años">Quince años</option>
+                                                                            <option value="Matrimonios">Matrimonios</option>
+                                                                            <option value="Baby Shower">Baby Shower</option>
+                                                                            <option value="Cumpleaños">Cumpleaños</option>
+                                                                            <option value="Reunion Familia">Reunion Familiar</option>
+                                                                            <option value="Primera Comunion">Primera Comunion</option>
+                                                                            <option value="Bautizo">Bautizo</option>
+                                                                            <option value="Navidad">Navidad</option>
+                                                                        </select></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="fechaEvento" style="font-weight: bold;">
+                                                                    Fecha del evento:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp &nbsp
+                                                                        <input type="date" id="con4" name="fechaEvento"
+                                                                            min="2020-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="horaAlquiler" style="font-weight: bold;">
+                                                                    Horas de alquiler:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaAlquiler" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="abono" style="font-weight: bold;">
+                                                                    Abono:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="abono" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            placeholder="0000,0" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="costo" style="font-weight: bold;"> Costo del
+                                                                    alquiler: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="costo" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            placeholder="0000,0" id="con41"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="deposito" style="font-weight: bold;">
+                                                                    Deposito:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="deposito" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            placeholder="0000,0" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="utileria" style="font-weight: bold;"> Utileria:
+                                                                </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-cash-register">
+                                                                        &nbsp &nbsp
+
+                                                                        <select name="utileria" id="con4">
+                                                                            <option value="">....</option>
+                                                                            <option value="Toda la utileria">Toda la utileria</option>
+                                                                            <option value="Utencilios de Cocina">Utencilios de Cocina
+                                                                            </option>
+                                                                            <option value="Equipo audio-visual">Equpo audio-visual
+                                                                            </option>
+                                                                            <option value="Sillas-Mesas">Sillas-Mesas</option>
+                                                                        </select></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-1 ml-4 p-1 ">
+                                                                <label for="nacionalidad" style="font-weight: bold;">
+                                                                    Adjuntar carta de compromiso:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont32">
+                                                                    &nbsp
+                                                                    <i class="far fa-folder-open">
+                                                                        &nbsp
+
+                                                                        <input type="file" name="fileToUpload"
+                                                                            id="fileToUpload" id="con42"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-5 mt-1 mr-2 ml-1  p-1 ">
+                                                                <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont31">
+
+                                                                    <i class="fas fa-address-card icon">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            placeholder="Codigo del administrativo" id="con41"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mb-2 mr-3 ml-3">
+                                                                <input type="submit" value="Registrar" class="button" name="anexar">
+
+                                                                <div style="width: 10px; height: 10px;"> </div>
+                                                                <input class="button" type="reset" value="LIMPIAR">
+                                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y
+                                                                    Política de privacidad.</p>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </form>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </details>
+
+
+
+
+
+
+
+
+                                <details style="margin-right: 12px; margin-left: 8px;">
+
+                                    <summary style="background-color:rgb(255, 81, 13); "> Curso:</summary>
+                                    <div class="row ">​
+
+
+                                        <div class="col-md p-1 mt-4 mb-2 mr-4 ml-4 "
+                                            style="background-color:rgb(153, 153, 153);" id="curso">
+
+                                            <div class="row ">​
+
+                                                <div class="col-md-3 p-1  mr-4 ml-4 "
+                                                    style="background-color:rgb(255, 81, 13);">
+                                                    <div id="l">
+                                                        <h2>Curso</h2>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md p-1 mb-2 mr-4 ml-2 ">
+
+                                                    <form class="formulario" name="form5"
+                                                        onSubmit="return validarFormulario5()" action="ControlCurso.php" method="POST">
+
+                                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                                        <br>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreCurso" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    Curso:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreCurso"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                          onpaste =" return false" placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="candidadHora" style="font-weight: bold;">
+                                                                    Cantidad de horas:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="candidadHora" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="row ">​
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="nombreOrganizacion" style="font-weight: bold;">
+                                                                    Organización que lo desarrolla:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-store-alt">&nbsp &nbsp
+                                                                        <input type="text" name="nombreOrganizacion"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                         onpaste =" return false"  onpaste =" return false"  placeholder="Organización" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="nit" style="font-weight: bold;">
+                                                                    NIT:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-store-alt">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="nit" nname="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false"  placeholder="NIT" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreProfesor" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    Profesor:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreProfesor"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                          onpaste =" return false"  placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="cedulaProfesor" style="font-weight: bold;"> Numero
+                                                                    de
+                                                                    cedula :</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+                                                                        <input type="text" name="cedulaProfesor" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false"  placeholder="Cedula" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="direccion" style="font-weight: bold;">
+                                                                    Direccion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-home">&nbsp &nbsp
+                                                                        <input type="text" name="direccion"
+                                                                          onpaste =" return false"  placeholder="Direccion" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="telefonoCelular" style="font-weight: bold;">
+                                                                    Telefono celular:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-phone icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="telefonoCelular"name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false"  placeholder="Telefono celular"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="fechaInicioCurso" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    del inicio:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp &nbsp
+                                                                        <input type="date" id="con4" name="fechaInicioCurso"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="fechaFinalCurso" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    de finalizacion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp
+
+                                                                        &nbsp
+                                                                        <input type="date" id="con4" name="fechaFinalCurso"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="diaClase" style="font-weight: bold;">
+                                                                    Horario de la clase:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+
+                                                                        <label for="diaClase"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Dias </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="diaClase"  name="letras" onkeypress="return validar(event)"
+                                                                            placeholder="Lunes-Viernes" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-2 mr-2 ml-2 p-1 ">
+
+
+                                                                <div class="input-contenedor1" id="cont3"
+                                                                    style="margin-top: 28px;">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="horaClase"
+                                                                        
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaClase" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false" onpaste =" return false" placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="tipoCurso" style="font-weight: bold;"> Tipo de
+                                                                    curso: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-cash-register">
+                                                                        &nbsp &nbsp
+
+                                                                        <select name="tipoCurso" id="con4">
+                                                                            <option value="">....</option>
+                                                                            <option value="Sin recaudo economico">Sin recaudo economico
+                                                                            </option>
+                                                                            <option value="Con recaudo economico">Con recaudo economico
+                                                                            </option>
+                                                                            <option value="Con convenio">Con convenio</option>
+                                                                        </select></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="costo" style="font-weight: bold;">
+                                                                    Costo
+                                                                    del curso:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="costo"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="costo" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="000,0" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="valorClase" style="font-weight: bold;"> Valor de
+                                                                    cada
+                                                                    clase: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="valorClase"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="valorClase" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false"  placeholder="000,0" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="ingresoJAC"
+                                                                    style="font-weight: bold;">Ingreso
+                                                                    para la JAC:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="ingresoJAC"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="ingresoJAC" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="000,0" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="gastoJAC"
+                                                                    style="font-weight: bold;">Gastos
+                                                                    de la JAC:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="gastoJAC"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="gastoJAC" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                          onpaste =" return false"  placeholder="000,0" id="con41"></i>
+                                                                </div>
+
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del administrativo: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="Codigo del administrativo" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mb-2 mr-3 ml-3">
+                                                                <input type="submit" value="Registrate" class="button" name="anexar">
+
+                                                                <div style="width: 10px; height: 10px;"> </div>
+                                                                <input class="button" type="reset" value="Limpiar">
+                                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y
+                                                                    Política de privacidad.</p>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </form>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </details>
+
+
+                                <details style="margin-left: 8px; margin-right: 12px;">
+
+                                    <summary style="background-color:rgb(255, 133, 20); "> Bazar:</summary>
+                                    <div class="row ">​
+
+
+
+                                        <div class="col-md p-1 mt-4 mb-2 mr-4 ml-4 "
+                                            style="background-color:rgb(153, 153, 153);" id="bazar">
+
+                                            <div class="row ">​
+
+                                                <div class="col-md-3 p-1   mr-4 ml-4 "
+                                                    style="background-color:rgb(255, 133, 20); ">
+                                                    <div id="l">
+                                                        <h2>Bazar</h2>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md p-1 mb-2 mr-4 ml-2 ">
+
+                                                    <form class="formulario" name="form6"
+                                                        onSubmit="return validarFormulario6()" action="ControlBazar.php" method="POST">
+
+                                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                                        <br>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreResponsable" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreResponsable"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                         onpaste =" return false" placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="apellidoResponsable" style="font-weight: bold;"
+                                                                    id="ap">
+                                                                    Apellido del responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="apellidoResponsable"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                          onpaste =" return false"  placeholder="Apellido Completo" id="con4">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="cedulaResponsable" style="font-weight: bold;"> Numero
+                                                                    de
+                                                                    cedula:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+                                                                        <input type="text" name="cedulaResponsable" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="Cedula" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="direccion" style="font-weight: bold;">
+                                                                    Direccion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-home">&nbsp &nbsp
+                                                                        <input type="text" name="direccion"
+                                                                           onpaste =" return false" placeholder="Direccion" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="telefonoCelular" style="font-weight: bold;">
+                                                                    Telefono celular:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-phone icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="telefonoCelular" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                           onpaste =" return false" placeholder="Telefono celular"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="fechaEventor" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    del evento:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp &nbsp
+                                                                        <input type="date" id="con4" name="fechaEventor"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="horaInicioEvento" style="font-weight: bold;">
+                                                                    Hora
+                                                                    de inicio del evento :</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaInicioEvento" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="horaFinalEvento" style="font-weight: bold;">
+                                                                    Hora
+                                                                    de finalizacion del evento :</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaFinalEvento" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="dineroGastado" style="font-weight: bold;">
+                                                                    Dinero
+                                                                    Gastado:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="dineroGastado" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            onpaste =" return false"   placeholder="0.000" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="dineroRecaudado" style="font-weight: bold;"> Dinero
+                                                                    recaudado: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="dineroRecaudado"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="dineroRecaudado" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            onpaste =" return false"   placeholder="0.000" id="con41"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="grupoInvolucrados" style="font-weight: bold;">
+                                                                    Gropos
+                                                                    involucrados:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="fas fa-users">
+
+
+                                                                        <input type="text" name="grupoInvolucrados"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                           onpaste =" return false"    placeholder="Grupos involucrados"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+
+                                                                        <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Codigo del administrativo" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mb-2 mr-3 ml-3">
+                                                                <input type="submit" value="Registrate" class="button" name="anexar">
+
+                                                                <div style="width: 10px; height: 10px;"> </div>
+                                                                <input class="button" type="reset" value="LIMPIAR">
+                                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y
+                                                                    Política de privacidad.</p>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </form>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </details>
+
+                                <details style="margin-left: 8px; margin-right: 12px;">
+
+                                    <summary style="background-color:rgb(255, 174, 24); "> Brigada:</summary>
+
+                                    <div class="row ">​
+
+
+
+                                        <div class="col-md p-1 mt-4 mb-2 mr-4 ml-4 "
+                                            style="background-color:rgb(153, 153, 153);" id="brigada">
+
+                                            <div class="row ">​
+
+                                                <div class="col-md-3 p-1   mr-4 ml-4 "
+                                                    style="background-color:rgb(255, 174, 24); ">
+                                                    <div id="l">
+                                                        <h2>Brigadas</h2>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md p-1 mb-2 mr-4 ml-2 ">
+
+                                                    <form class="formulario" name="form7"
+                                                        onSubmit="return validarFormulario7()" action="ControlBrigada.php" method="POST">
+
+                                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+
+
+                                                        <br>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreOrganizacion" style="font-weight: bold;">
+                                                                    Organizacion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-store-alt">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="nombreOrganizacion"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                             onpaste =" return false"  placeholder="Organizacion" id="con4"> </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="nit" style="font-weight: bold;"
+                                                                    id="ap">
+                                                                    NIT:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-store-alt">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="nit" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="NIT" id="con4"> </i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row ">​
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreResponsable" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreResponsable"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                           onpaste =" return false"    placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="apellidoResponsable" style="font-weight: bold;"
+                                                                    id="ap">
+                                                                    Apellido del responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="apellidoResponsable"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                          onpaste =" return false"  placeholder="Apellido Completo" id="con4">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="cedulaResponsable" style="font-weight: bold;"> Numero
+                                                                    de
+                                                                    cedula:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+                                                                        <input type="text" name="cedulaResponsable" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Cedula" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="direccion" style="font-weight: bold;">
+                                                                    Direccion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-home">&nbsp &nbsp
+                                                                        <input type="text" name="direccion"
+                                                                             onpaste =" return false"  placeholder="Direccion" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="telefonoCelular" style="font-weight: bold;">
+                                                                    Telefono celular:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-phone icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="telefonoCelular" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Telefono celular"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="tipoBrigada" style="font-weight: bold;"> Tipo de
+                                                                    Brigada:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <select name="tipoBrigada" id="con4">
+                                                                            <option value="">....</option>
+                                                                            <option value="Brigada de salud">Brigada de salud </option>
+                                                                            <option value="Brigada de higiene oral">Brigada de higiene oral
+                                                                            </option>
+                                                                            <option value="Brigada canina">Brigada canina</option>
+                                                                            <option value="Brigada de seguridad">Brigada de seguridad
+                                                                            </option>
+                                                                            <option value="Brigada de evacuación">Brigada de evacuación
+                                                                            </option>
+                                                                        </select></i>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="fechaBrigada" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    de la brigada:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp &nbsp
+                                                                        <input type="date" id="con4" name="fechaBrigada"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="horaInicioBrigada" style="font-weight: bold;">
+                                                                    Hora
+                                                                    de inicio de la brigada:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaInicioBrigada" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+
+                                                        <div class="row ">​
+
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="horaFinalBrigada" style="font-weight: bold;">
+                                                                    Hora
+                                                                    de finalizacion de la brigada :</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaFinalBrigada" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Codigo del administrativo" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mb-2 mr-3 ml-3">
+                                                                <input type="submit" value="Registrate" class="button" name="anexar">
+
+                                                                <div style="width: 10px; height: 10px;"> </div>
+                                                                <input class="button" type="reset" value="LIMPIAR">
+                                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y
+                                                                    Política de privacidad.</p>
+
+                                                            </div>
+
+
+                                                        </div>
+
+
+
+
+
+
+
+                                                    </form>
+
+
+
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </details>
+                                <details style="margin-left: 8px; margin-right: 12px;">
+
+                                    <summary style="background-color:rgb(255, 231, 17); "> Campeonato:</summary>
+
+                                    <div class="row ">​
+
+
+
+                                        <div class="col-md p-1 mt-4 mb-2 mr-4 ml-4 "
+                                            style="background-color:rgb(153, 153, 153);" id="campeonato">
+
+                                            <div class="row ">​
+
+                                                <div class="col-md-3 p-1   mr-4 ml-4 "
+                                                    style="background-color:rgb(255, 231, 17); ">
+                                                    <div id="l">
+                                                        <h2>Campeonato</h2>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md p-1 mb-2 mr-4 ml-2 ">
+
+                                                    <form class="formulario" name="form8"
+                                                        onSubmit="return validarFormulario8()" action="ControlCampeonato.php" method="POST">
+
+                                                        <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+
+
+                                                        <br>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreCampeonato" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    campeonato:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-futbol">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="nombreCampeonato"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                            onpaste =" return false"   placeholder="Nombre" id="con5"> </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="participantes" style="font-weight: bold;"
+                                                                    id="ap">
+                                                                    Participantes:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <select name="participantes" id="con4">
+                                                                            <option value="">....</option>
+                                                                            <option value="30">Adultos </option>
+                                                                            <option value="31">Jovenes</option>
+                                                                            <option value="32">Niños</option>
+                                                                            <option value="33">Mixto</option>
+                                                                            <option value="34">Femenino</option>
+                                                                        </select></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row ">​
+                                                            <div class="col-md mt-1 mr-2 ml-4 mb-2 p-1 ">
+                                                                <label for="nombreResponsable" style="font-weight: bold;"> Nombre
+                                                                    del
+                                                                    responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="codigoAdministrador"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                             onpaste =" return false"  placeholder="Nombre Completo" id="con4"></i>
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="apellidoResponsable" style="font-weight: bold;"
+                                                                    id="ap">
+                                                                    Apellido del responsable:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-user icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="apellidoResponsable"
+                                                                        name="letras" onkeypress="return validar(event)"
+                                                                             onpaste =" return false"  placeholder="Apellido Completo" id="con4">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="cedulaResponsable" style="font-weight: bold;"> Numero
+                                                                    de
+                                                                    cedula:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+
+                                                                        <input type="text" name="cedulaResponsable" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            onpaste =" return false"   placeholder="Cedula" id="con4"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="direccion" style="font-weight: bold;">
+                                                                    Direccion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-home">&nbsp &nbsp
+                                                                        <input type="text" name="direccion"
+                                                                             onpaste =" return false"  placeholder="Direccion" id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="telefonoCelular" style="font-weight: bold;">
+                                                                    Telefono celular:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-phone icon">
+                                                                        &nbsp &nbsp
+
+                                                                        <input type="text" name="telefonoCelular" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Telefono celular"
+                                                                            id="con4"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 mb-2 p-1 ">
+                                                                <label for="costoPersona" style="font-weight: bold;"> Costo
+                                                                    por
+                                                                    persona campeonato:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="costoPersona" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            onpaste =" return false"   placeholder="0.000" id="con41"></i><i
+                                                                        class="far fa"></i>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="gastoJAC" style="font-weight: bold;">
+                                                                    Dinero
+                                                                    Gastado por la JAC:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="gastoJAC" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                            onpaste =" return false"   placeholder="0.000" id="con41"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-1 mr-2 ml-2  p-1 ">
+                                                                <label for="dineroRecaudadoJAC" style="font-weight: bold;"> Dinero
+                                                                    recaudado para la JAC: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-money-bill-alt">
+                                                                        &nbsp
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            $ </label>
+                                                                        &nbsp
+
+                                                                        <input type="text" name="dineroRecaudadoJAC" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0.000" id="con41"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4  p-1 ">
+                                                                <label for="nacionalidad" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    del inicio:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp &nbsp
+                                                                        <input type="date" id="con4" name="fechaInicio"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md mt-1 mr-2 ml-2 p-1 ">
+                                                                <label for="fechaFinal" style="font-weight: bold;">
+                                                                    Fecha
+                                                                    de finalizacion:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="far fa-calendar-check">
+                                                                        &nbsp
+
+                                                                        &nbsp
+                                                                        <input type="date" id="con4" name="fechaFinal"
+                                                                            min="2030-05-05"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mr-2 ml-4 p-1 ">
+                                                                <label for="diaCampeonato" style="font-weight: bold;">
+                                                                    Horario del Campeonato:</label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+
+                                                                        <label for="fecha"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Dias </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="diaCampeonato" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Lunes-Viernes" id="con5"></i>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-md mt-2 mr-2 ml-2 p-1 ">
+
+
+                                                                <div class="input-contenedor1" id="cont3"
+                                                                    style="margin-top: 28px;">
+                                                                    &nbsp
+                                                                    <i class="far fa-clock">
+                                                                        &nbsp
+                                                                        <label for="horaCampeonato"
+                                                                            style="font-weight: bold; color: #000; font-size: 20px;">
+                                                                            Hr </label>
+                                                                        &nbsp
+                                                                        <input type="text" name="horaCampeonato" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="0:00" id="con41"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <div class="row ">​
+
+
+
+                                                            <div class="col-md mt-1 mr-4 ml-4  p-1 ">
+                                                                <label for="cedulaRegistrante" style="font-weight: bold;"> Codigo del Administrativo: </label>
+                                                                <br>
+                                                                <div class="input-contenedor1" id="cont3">
+
+                                                                    <i class="fas fa-address-card icon">
+                                                                        &nbsp
+
+                                                                        <input type="text" name="cedulaRegistrante" name="numeros" maxlength="12"
+                                                                        onkeypress="return validarNumeros(event)"
+                                                                             onpaste =" return false"  placeholder="Codigo del administrativo" id="con5"></i><i
+                                                                        class="far fa"></i>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <div class="row ">​
+
+                                                            <div class="col-md mt-1 mb-2 mr-3 ml-3">
+                                                                <input type="submit" value="Registrate" class="button" name="anexar">
+
+                                                                <div style="width: 10px; height: 10px;"> </div>
+                                                                <input class="button" type="reset" value="LIMPIAR">
+                                                                <p>Al registrarte, aceptas nuestras Condiciones de uso y
+                                                                    Política de privacidad.</p>
+
+                                                            </div>
+
+
+                                                        </div>
+
+
+
+
+
+
+
+                                                    </form>
+
+
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </details>
+
+
+
+
+                            </div>
+
+                        </div>
+
+                </div>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+</html>

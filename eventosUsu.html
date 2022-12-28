@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Eventos
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="eventosUsu.css">
+    <script type="application/Javascript" src="eventosUsu.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+</head>
+
+<body onload="draw(); draw1(); draw2(); draw3(); draw4(); draw5(); draw6(); draw7(); draw8(); draw9(); ">
+    <div class="container" id="plano">​
+
+
+
+        <div class="row ">​
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingresoUsuario.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160"  style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);">
+                <div id="menu">
+
+                    <div class="btn-group">​​​
+                        ​
+                                <button type="button" class="btn btn-light"> <a href="informacionUsu.html" id="a" >  Informacion</a> </button>​
+                                ​
+                                <button type="button" class="btn btn-light"> <a href="consultaUsu.html" id="a">Consulta</a> </button>​
+                                ​
+                               ​
+                               <button type="button" class="btn btn-secondary"> <a href="eventosUsu.html" id="a"
+                                style="color: white;">Actividades</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="cuentasUsu.html" id="a">Rendición de cuentas</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="planeacionUsu.html" id="a">Plan de acción</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="ingreso.html" id="a">Cerrar Sesión</a> </button>​
+                    </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row ">​
+
+            <div class="col-md mt-5 mr-4 p-2" style="background-color:rgb(230, 238, 233);" id="c1">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 0, 0);" id="i1">
+                        <p id="p1"> Obras En Proceso: </p>
+                    </div>
+                </div>
+
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Obras: </p>
+                        <p id="p3"> * Paimentación de vías. <br>
+                            * Mejoramiento del parque. <br>
+                            * Pintada de fachada. <br>
+                            * Construcción cancha de microfútbol.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 mr-4 p-2" style="background-color:rgb(230, 238, 233);" id="c2">
+
+                <div class="row  ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 32, 2);" id="i1">
+
+                        <p id="p1"> Proximas Asambleas: </p>
+
+
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo2" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Asambleas: </p>
+                        <p id="p3"> * Primera asamblea (16/02/2020). <br>
+                            * Segunda asamblea (28/06/2020). <br>
+                            * Tercera asamblea (13/12/2020).
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 p-2" style="background-color:rgb(230, 238, 233);" id="c3">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2   p-2" style="background-color: rgb(255, 94, 0);" id="i1">
+                        <p id="p1"> Basares: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo3" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Basar: </p>
+                        <p id="p3"> Por el momento no hay ninguno definido.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md mt-5 mr-4 p-2" style="background-color:rgb(230, 238, 233);" id="c1">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 102, 0);" id="i1">
+                        <p id="p1"> Campeonatos: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo4" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Campeonatos: </p>
+                        <p id="p3"> Por el momento los campeonatos estan suspendidos.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 mr-4 p-2" style="background-color:rgb(230, 238, 233);" id="c2">
+
+                <div class="row  ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 145, 0);" id="i1">
+
+                        <p id="p1"> Cursos: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo5" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Cursos: </p>
+                        <p id="p3"> * Manualidades. <br>
+                            * Porcelanicron. <br>
+                            * Ofimática. <br>
+                            * Plastilina.<br>
+                            * Dibujo artistico.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 p-2" style="background-color:rgb(230, 238, 233);" id="c3">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2   p-2" style="background-color: rgb(255, 166, 0);" id="i1">
+                        <p id="p1"> Brigadas De Salud: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo6" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Brigadas: </p>
+                        <p id="p3"> *Brigada de salud. <br>
+                            * Brigada de Seguridad. <br>
+                            * Brigada de Evacuación.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md mt-5 mr-4 mb-4 p-2" style="background-color:rgb(230, 238, 233);" id="c1">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 196, 0);" id="i1">
+                        <p id="p1"> Reunion De Directivos: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo7" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Reunion: </p>
+                        <p id="p3"> *Primera reunion (08/02/2020). <br>
+                            * Segunda reunion (20/06/2020). <br>
+                            * Tercera reunion (05/12/2020).
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 mr-4 mb-4 p-2" style="background-color:rgb(230, 238, 233);" id="c2">
+
+                <div class="row  ">​
+
+                    <div class="col-md-8 ml-2 p-2" style="background-color: rgb(255, 230, 0);" id="i1">
+
+                        <p id="p1"> Distribucion De Labores: </p>
+
+
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo8" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Comites: </p>
+                        <p id="p3"> *Comite de seguridad. <br>
+                            * Comite de deportes. <br>
+                            * Comite de medio ambiente. <br>
+                            * Comite de cultura. <br>
+                            * Comite de trabajo.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md mt-5 mb-4 p-2" style="background-color:rgb(230, 238, 233);" id="c3">
+                <div class="row ">​
+
+                    <div class="col-md-8 ml-2   p-2" style="background-color: rgb(255, 251, 0);" id="i1">
+                        <p id="p1"> Alquiler Para Eventos: </p>
+                    </div>
+                </div>
+
+                <div class="row ">​
+
+                    <div class="col-md ml-2   p-2" id="i2">
+                        <canvas id="lienzo9" width="340" height="330"></canvas>
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">​
+
+                    <div class="col-md-9 ml-2   p-2" id="i3" style="background-color: black;">
+                        <p id="p2"> Eventos: </p>
+                        <p id="p3"> * Quince años. <br>
+                            * Matrimonios. <br>
+                            * Bautizos. <br>
+                            * Primeras comuniones. <br>
+                            * Otras Fiestas.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+    </div>
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+</html>

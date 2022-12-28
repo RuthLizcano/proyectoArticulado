@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Consulta
+    </title>
+    <meta charset=utf-8 />
+    <meta http-equiv="Content-Type" content="text/htmll; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <script type="application/Javascript" src="registro.js"> </script>
+    <script type="application/Javascript" src="consulta.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>​
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>​
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">​  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+
+<body onload="draw(); draw2(); ">
+
+
+
+    <div class="container" id="plano">​
+
+        <div class="row ">​
+            <div class="col-md  p-7">
+
+                <div id="logo">
+                    <a href="ingresoAdministrados.html" id="c">
+                        <figure> <img src="xxx3.png" width="145" height="160"  style="filter: contrast(175%);" />
+                        </figure>
+                    </a>
+                </div>
+                <div id="letra">
+                    <canvas id="degradado" width="840" height="100"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">​
+
+            <div class="col-md  p-2" style="background-color:rgb(255, 217, 0);">
+                <div id="menu">
+
+                    <div class="btn-group">​
+​
+                                <button type="button" class="btn btn-light"> <a href="informacionAdm.html" id="a" >  Informacion</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="busqueda.html" id="a">Busqueda</a> </button>
+                                <button type="button" class="btn btn-secondary"> <a href="consultaAdm.html" id="a"
+                                    style="color: white;">Consulta</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="registro.html" id="a">Registro</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="modificacion.html" id="a">Actualización</a> </button>​
+                                <button type="button" class="btn btn-light"> <a href="eventosAdm.html" id="a">Actividades</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="cuentasAdm.html" id="a">Rendición de cuentas</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="planeacionAdm.html" id="a">Plan de acción</a> </button>
+                                <button type="button" class="btn btn-light"> <a href="ingreso.html" id="a">Cerrar Sesión</a> </button>
+                        ​
+                    </div>​
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1">
+                <div class="alert alert-warning" style="margin-top: 5px;">​
+                    <strong>Recuerde!</strong> Solo podra hacer el proceso de registro si es miembro administrativo de
+                    la junta de acción comunal.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md  p-1 " style="background-color:rgb(255, 217, 0);">
+
+
+                <div id="menu2">
+
+                    <div class="btn-group" style="height: 40px; ">​
+
+                        <button type="button" class="btn btn-light" id="btn" style="width: 500px;">
+                            <a href="#obra" id="b"> <i class="fas fa-journal-whills" style="color: rgb(0, 0, 0);">&nbsp
+                                    &nbsp Formularios </i>
+                            </a>
+                        </button>​
+                    </div>​
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+            <div class="col-md-7 mt-2 mb-2 p-2" style="background-color:rgb(230, 238, 233); text-align: center;"
+                id="base">
+
+                <canvas id="lienzo" width="378" height="368"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-md-center ">​
+
+            <div class="col-md mt-2 mb-2 p-2">
+
+                <div class="container" id="obra">​
+
+                    <details>
+                        <summary style="background-color:rgb(251, 255, 0) ;"> Consultar Obra:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario" onSubmit="return validarConsultaAdm()" action="ControlObra.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Esta consulta busca
+                                        todas las obras registradas en un año respectivo:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Ingrese el año en el que
+                                                inician las obras:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cr1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="number" min="2018" max="2025" name="año" placeholder="aaaa" id="col1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-2 mt-4 mb-2 mr-2 ml-2 ">
+                                            <input type="submit" value="Consultar" class="button" style="height: 50px;" name="consultarAdm">
+
+
+
+                                        </div>
+                                        <div class="col-md-2 mt-4 mb-2 mr-4 ml-2 ">
+
+                                            <input class="button" type="reset" value="Limpiar" style="height: 50px;">
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+
+
+                <div class="container" id="afiliado">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 153, 0) ;"> Consultar Afiliados:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario4" onSubmit="return validarConsultaAdm4()" action="ControlAfiliado.php" method="POST" >
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Esta consulta busca
+                                        todos los afiliados registrados en un año respectivo:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-4 mr-1 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Ingrese el año en el que
+                                                se registraron los afiliados:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cr1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="number" min="2018" max="2025" name="año" placeholder="aaaa" id="col1"></i>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-2 mt-4 mb-2 mr-2 ml-2 ">
+                                            <input type="submit" value="Consultar" class="button" style="height: 50px;" name="consultarAdm">
+
+
+
+                                        </div>
+                                        <div class="col-md-2 mt-4 mb-2 mr-4 ml-2 ">
+
+                                            <input class="button" type="reset" value="Limpiar" style="height: 50px;" >
+
+
+                                        </div>
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+                <div class="container" id="Administrativo">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 51, 0) ;"> Consultar Administrativos:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario" name="formulario2" onSubmit="return validarConsultaAdm2()" action="ControlAdministrativo.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Esta consulta busca
+                                        todos los Administrativos registrados en un año respectivo:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Ingrese el año en el que
+                                                se registraron los administrativos:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cr1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="number" min="2018" max="2025" name="año" placeholder="aaaa" id="col1"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-2 mt-4 mb-2 mr-2 ml-2 ">
+                                            <input type="submit" value="Consultar" class="button" style="height: 50px;" name="consultarAdm">
+
+
+
+                                        </div>
+                                        <div class="col-md-2 mt-4 mb-2 mr-4 ml-2 ">
+
+                                            <input class="button" type="reset" value="Limpiar" style="height: 50px;">
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+                <div class="container" id="Evento">​
+
+                    <details>
+                        <summary style="background-color:rgb(255, 0, 0) ;"> Consultar Eventos:</summary>
+
+                        <div class="row ">​
+
+                            <div class="col-md p-2" style="background-color:rgba(255, 255, 255, 0.774);">
+
+                                <form class="formulario3" name="formulario3" onSubmit="return validarConsultaAdm3()" action="ControlEventos.php" method="POST">
+
+                                    <h1 style="color:  rgb(0, 0, 0);">Formulario </h1>
+                                    <br>
+                                    <label for="busqueda" style="font-weight: bold; color: #000;"> Esta consulta busca
+                                        todos los Eventos registrados en un año respectivo:</label>
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mr-4 ml-4 p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Ingrese el año en el que
+                                                se registraron los administrativos:</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cr1">
+
+                                                <i class="fas fa-search-location">
+                                                    &nbsp
+                                                    <input type="number" min="2018" max="2025" name="año" placeholder="aaaa" id="col1"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md mt-2 ml-2 mr-4  p-1">
+
+                                            <label for="nombreObra" style="font-weight: bold;"> Tipo del evento
+                                                :</label>
+                                            <br>
+
+                                            <div class="input-contenedor1" id="cr1">
+
+                                                <i class="fas fa-search">
+                                                    &nbsp
+                                                    <select name="tipoEvento" id="col1">
+                                                        <option value="">....</option>
+                                                        <option value="1">Alquiler
+                                                        </option>
+                                                        <option value="2">Curso
+                                                        </option>
+                                                        <option value="3">Bazar</option>
+                                                        <option value="4">Brigada</option>
+                                                        <option value="5">Campeonato</option>
+                                                    </select></i>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2">
+                                            <input type="submit" value="Consultar" class="button" name="consultarAdm">
+
+                                            <div style="width: 10px; height: 10px;"> </div>
+                                            <input class="button" type="reset" value="LIMPIAR">
+                                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de
+                                                privacidad.</p>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">​
+
+                                        <div class="col-md mt-2 mb-2 mr-2 ml-2 p-1">
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </details>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <footer>
+        <h4 id="h4">Contactenos
+            telefonico 3212777556<br>Calle 58 G # 48 - 60 <br> Bogota Barrio la gran esperanza</h4>
+    </footer>
+</body>
+
+</html>
